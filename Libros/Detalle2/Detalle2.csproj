@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4CC7C3F6-DE7A-42C2-AB4F-AF2486B70DE8}</ProjectGuid>
+    <ProjectGuid>{8D9FE865-333A-4ABF-9E29-16630F3A9EE9}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Detalle</RootNamespace>
-    <AssemblyName>Detalle</AssemblyName>
+    <RootNamespace>Detalle2</RootNamespace>
+    <AssemblyName>Detalle2</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
@@ -68,16 +68,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\EstudianteBLL.cs" />
-    <Compile Include="BLL\MateriaBLL.cs" />
-    <Compile Include="DAL\DataDb.cs" />
-    <Compile Include="DataDbDataSet.Designer.cs">
+    <Compile Include="BLL\AutoresBLL.cs" />
+    <Compile Include="BLL\LibroBLL.cs" />
+    <Compile Include="DAL\DetalleDb.cs" />
+    <Compile Include="DetalleDbDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>DataDbDataSet.xsd</DependentUpon>
+      <DependentUpon>DetalleDbDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Entidades\Estudiantes.cs" />
-    <Compile Include="Entidades\Materias.cs" />
+    <Compile Include="Entidades\Autores.cs" />
+    <Compile Include="Entidades\Libros.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,17 +92,17 @@
     <Compile Include="UI\Consultas\Consulta.Designer.cs">
       <DependentUpon>Consulta.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\MateriaRegistro.cs">
+    <Compile Include="UI\Registros\AutoresForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\MateriaRegistro.Designer.cs">
-      <DependentUpon>MateriaRegistro.cs</DependentUpon>
+    <Compile Include="UI\Registros\AutoresForm.Designer.cs">
+      <DependentUpon>AutoresForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="UI\Registros\RegistroEstudiante.cs">
+    <Compile Include="UI\Registros\LibrosForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\Registros\RegistroEstudiante.Designer.cs">
-      <DependentUpon>RegistroEstudiante.cs</DependentUpon>
+    <Compile Include="UI\Registros\LibrosForm.Designer.cs">
+      <DependentUpon>LibrosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Utilidades.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -120,23 +120,23 @@
     <EmbeddedResource Include="UI\Consultas\Consulta.resx">
       <DependentUpon>Consulta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\MateriaRegistro.resx">
-      <DependentUpon>MateriaRegistro.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registros\AutoresForm.resx">
+      <DependentUpon>AutoresForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UI\Registros\RegistroEstudiante.resx">
-      <DependentUpon>RegistroEstudiante.cs</DependentUpon>
+    <EmbeddedResource Include="UI\Registros\LibrosForm.resx">
+      <DependentUpon>LibrosForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
-    <None Include="DataDbDataSet.xsc">
-      <DependentUpon>DataDbDataSet.xsd</DependentUpon>
+    <None Include="DetalleDbDataSet.xsc">
+      <DependentUpon>DetalleDbDataSet.xsd</DependentUpon>
     </None>
-    <None Include="DataDbDataSet.xsd">
+    <None Include="DetalleDbDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DataDbDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>DetalleDbDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="DataDbDataSet.xss">
-      <DependentUpon>DataDbDataSet.xsd</DependentUpon>
+    <None Include="DetalleDbDataSet.xss">
+      <DependentUpon>DetalleDbDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -149,17 +149,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="DataBase\DataDb.mdf">
+    <Content Include="DataBase\DetalleDb.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="DataBase\DataDb_log.ldf">
+    <Content Include="DataBase\DetalleDb_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>DataDb.mdf</DependentUpon>
+      <DependentUpon>DetalleDb.mdf</DependentUpon>
     </Content>
-    <Content Include="DataBase\Script.sql" />
+    <Content Include="DataBase\Scrip.sql" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">
       <Visible>False</Visible>
